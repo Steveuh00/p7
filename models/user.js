@@ -9,16 +9,16 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {
+     associate(models) {
       models.User.hasMany(models.Post)
     }
   }
   User.init({
     userid: DataTypes.INTEGER,
-    useremail: DataTypes.STRING,
-    userprenom: DataTypes.STRING,
-    usernom: DataTypes.STRING,
-    userpassword: DataTypes.STRING,
+    email: DataTypes.STRING,
+    prenom: DataTypes.STRING,
+    nom: DataTypes.STRING,
+    password: DataTypes.STRING,
     isAdmin: DataTypes.BOOLEAN
   }, {
     sequelize,
